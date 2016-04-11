@@ -10,6 +10,7 @@
 	</head>
 
 	<body>
+		<p>Test Github</p>
 	    
 	<?= 'Hello world' ?>
 
