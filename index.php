@@ -1,22 +1,26 @@
+<?php
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-	    <meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-	    <title>Première pierre de notre site "Trouve un super film !"</title>
-	    <link rel="stylesheet" href="src/css/reset.css">
-	    <link rel="stylesheet" href="src/css/style.css">
-	</head>
+// Config 
+include 'config/options.php';
+// include 'config/database.php'; // Uncomment if you need database
 
-	<body>
-		<p>Test Github</p>
-	    
-	<?= 'Hello world' ?>
+// Get the query
+$q = empty($_GET['q']) ? '' : $_GET['q'];
 
+// Routes
+if($q == '')
+	$page = 'home';
+else if($q == 'about')
+	$page = 'about';
+else if($q == 'news')
+	$page = 'news';
+else if(preg_match('/^news\/[-a-z0-9]+$/',$q)) // news/mon-titre-d-actualite
+	$page = 'news-single';
+else
+	$page = '404';
 
-	    <script src="src/js/libs/jquery-2.2.0.min.js"></script>
-	    <script src="src/js/app/script.js"></script>
-	</body>
-
-</html>            
+// Includes
+include 'controllers/'.$page.'.php';
+include 'views/partials/header.php';
+include 'views/pages/'.$page.'.php';
+include 'views/partials/footer.php';
