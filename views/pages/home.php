@@ -2,10 +2,19 @@
 	<div class="sub-title">
 		<p>Écris le nom de ton film favori pour trouver le film de la soirée</p>
 	</div>
+
+	<div id="search-bar">
+        <form class="test" method="GET" action="" style="text-align: center;position: absolute;left: 10%;margin-top:25px">
+            <input type="search" name="keywords" placeholder="Find out another wonderful movie"/>
+            <input type="submit" class="hide" value="rechercher"></button>
+        </form>
+    </div>
 	
 	<div class="btn-sign">
 		<a href="#" class="sign">INSCRIS-TOI POUR SAUVEGARDER TES RECHERCHES</a>
 	</div>
+
+
 
 	<div class="social-net">
 		<a href="#"><img src="src/images/fb.png"></a>
@@ -15,7 +24,7 @@
 		<a href="#"><img src="src/images/linkedin.png"></a>
 	</div>
 
-	<div class="sign-in"><!-- POP-IN Inscription -->
+	<div class="sign-in animated slideInUp"><!-- POP-IN Inscription -->
 		<div class="title2">
 			<h4>Inscription</h4>
 		</div>
@@ -35,11 +44,11 @@
 		</form>
 	</div>
 
-	<div class="connect"><!-- POP-IN Mon compte -->
+	<div class="connect animated slideInUp"><!-- POP-IN Mon compte -->
 		<div class="title2">
 			<h4>Mon compte</h4>
 		</div>
-		<div class="exit">
+		<div class="exit1">
 			<img src="src/images/exit.png">
 		</div>
 		<form action="#" method="post" class="account">
