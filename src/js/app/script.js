@@ -2,40 +2,60 @@ console.log('Hello');
 
 
 // Déclaration des variables
-var compte 	 = document.querySelector('.compte');
-var signin 	 = document.querySelector('.sign-in');
-var exit   	 = document.querySelector('.exit');
-var wishlist = document.querySelector('.wishlist');
-var connect  = document.querySelector('.connect');
-var exit1    = document.querySelector('.exit1');
-var btnsign	 = document.querySelector('.btn-sign')
+var compte 	  = document.querySelector('.compte');
+var signin 	  = document.querySelector('.sign-in');
+var exit   	  = document.querySelector('.exit');
+var wishlist  = document.querySelector('.wishlist');
+var connect   = document.querySelector('.connect');
+var exit1     = document.querySelector('.exit1');
+var btnsign	  = document.querySelector('.btn-sign')
+
+var subtitle  = document.querySelector('.sub-title');
+var searchbar = document.querySelector('.search-bar');
+var socialnet = document.querySelector('.social-net');
+
 
 // Apparition de la POP-IN Inscription
 compte.addEventListener('click',function(){
 	signin.setAttribute("style","display:block;");
+	subtitle.setAttribute("style","display:none;");
+	searchbar.setAttribute("style","display:none;");
+	btnsign.setAttribute("style","display:none;");
+	socialnet.setAttribute("style","display:none;");
+
 });
-// Disparition de la POP-IN Inscription
 exit.addEventListener('click',function(){
 	signin.setAttribute("style","display:none;");
+	subtitle.setAttribute("style","display:block;");
+	searchbar.setAttribute("style","display:block;");
+	btnsign.setAttribute("style","display:block;");
+	socialnet.setAttribute("style","display:block;");
 });
 
 // Apparition de la POP-IN Wishlist
 wishlist.addEventListener('click',function(){
 	connect.setAttribute("style","display:block;");
+	subtitle.setAttribute("style","display:none;");
+	searchbar.setAttribute("style","display:none;");
+	btnsign.setAttribute("style","display:none;");
+	socialnet.setAttribute("style","display:none;");
 });
-// Disparition de la POP-IN Wishlist
 exit1.addEventListener('click',function(){
 	connect.setAttribute("style","display:none;");
+	ubtitle.setAttribute("style","display:block;");
+	searchbar.setAttribute("style","display:block;");
+	btnsign.setAttribute("style","display:block;");
+	socialnet.setAttribute("style","display:block;");
 });
 
 // Apparition de la POP-IN Inscription
 btnsign.addEventListener('click',function(){
 	signin.setAttribute("style","display:block;");
 });
-// Disparition de la POP-IN Inscription
 exit.addEventListener('click',function(){
 	signin.setAttribute("style","display:none;");
 });
+
 
 
 

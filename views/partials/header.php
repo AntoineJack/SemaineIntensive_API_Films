@@ -12,7 +12,7 @@
 		<ul>
 			<li><a href="#" class="compte">Mon compte</a></li>
 			<li><a href="#">Mes films</a></li>
-			<li><a href="#" class="wishlist">Ma Wishlist</a></li>
+			<li class="endofbar"><a href="#" class="wishlist">Ma Wishlist</a></li>
 	
 		</ul>
 	</div>

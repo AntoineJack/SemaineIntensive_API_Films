@@ -3,7 +3,7 @@
 		<p>Écris le nom de ton film favori pour trouver le film de la soirée</p>
 	</div>
 
-	<div id="search-bar">
+	<div class="search-bar">
         <form class="test" method="GET" action="" style="text-align: center;position: absolute;left: 10%;margin-top:25px">
             <input type="search" name="keywords" placeholder="Find out another wonderful movie"/>
             <input type="submit" class="hide" value="rechercher"></button>
@@ -29,7 +29,7 @@
 			<h4>Inscription</h4>
 		</div>
 		<div class="exit">
-			<img src="src/images/exit.png">
+			<img src="src/images/cross.png">
 		</div>
 		<form action="#" method="post">
 			<div>
@@ -49,14 +49,14 @@
 			<h4>Mon compte</h4>
 		</div>
 		<div class="exit1">
-			<img src="src/images/exit.png">
+			<img src="src/images/cross.png">
 		</div>
 		<form action="#" method="post" class="account">
 			<div>
 				<label for="username">IDENTIFIANT :</label>
 				<input type="text" name="username" id="username" require="true">
 				<label for="motdepass">MOT DE PASSE :</label>
-				<input type="text" name="motdepass" id="motdepass" require="true">
+				<input type="password" name="motdepass" id="motdepass" require="true">
 				<input type="submit" class="submit">
 			</div>				
 		</form>
