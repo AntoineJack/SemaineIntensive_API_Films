@@ -1,3 +1,3 @@
 <?php
 
-define('URL','http://localhost/p2019/templates/04/');
+define('URL','http://localhost/Semaine%20intensive/');

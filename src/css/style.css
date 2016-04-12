@@ -1,5 +1,291 @@
-body {
-	background:#eee;
-	font-family:Helvetica,Arial;
-	font-size:14px;
+html, body{
+	height: 100%;
+	overflow: hidden;
 }
+
+body {
+	font-size:14px;
+	font-family: 'Brandon_light';
+	background:url('../images/bck.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+@font-face { 
+	font-family: 'Brandon_bld'; 
+	src: url('../fonts/Brandon_bld.otf') format('truetype');
+}
+
+@font-face { 
+	font-family: 'Brandon_blk'; 
+	src: url('../fonts/Brandon_blk.otf') format('truetype');
+}
+
+@font-face { 
+	font-family: 'Brandon_light'; 
+	src: url('../fonts/Brandon_light.otf') format('truetype');
+}
+
+@font-face { 
+	font-family: 'Brandon_med'; 
+	src: url('../fonts/Brandon_med.otf') format('truetype');
+}
+
+.nav-bar{
+	text-align: center;
+	width: 100%;
+	list-style: none;
+	padding:0;
+	margin-top: 25px;
+}
+
+.nav-bar ul{
+	margin-left: 150px;
+}
+
+.nav-bar li {
+	display: inline;
+	text-decoration:none;
+	margin-right:150px;
+	color:white;
+	font-family: 'Brandon_light',sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.nav-bar a{
+	text-decoration: none;
+	color: white;
+}
+
+.nav-bar a:hover{
+	color:#50D2C2;
+	transition:0.4s ease;
+}
+
+.title{
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	margin-top:-60px;
+}
+
+.title h2{
+	font-size: 100px;
+	color: white;
+	font-family: 'Brandon_light', sans-serif;
+	font-weight: 300;
+	letter-spacing: 12.5;
+    text-transform: uppercase;
+}
+
+.sub-title{
+	margin-top:-50px;
+	text-align: center;	
+	margin-right: auto;
+	margin-left:auto;
+}
+
+.sub-title p{
+	color:#FEFEFE;
+	font-family: 'Brandon-med', sans-serif;
+	opacity: 0.75;
+	letter-spacing: 5px;
+	font-size: 17px;
+}
+
+
+.btn-sign{
+	margin-top: 250px;
+	margin-right:auto;
+	margin-left:auto;
+	text-align: center;
+	font-weight: 100;
+}
+
+
+.sign{
+	width: 600px;
+	background: #50D2C2;
+	padding:20px;
+	border-radius:3px;
+	color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Brandon-light', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.social-net{
+	margin:auto;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+.social-net img{
+	height:15px;
+	margin-right: 35px;
+}
+
+.sign-in{
+	background-color:black;
+	opacity:0.97;
+	color:#FFFFFF;
+	position:absolute;
+	width: 100%;
+	top : 210px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	height:600px;
+	
+
+}
+
+.title2{
+	margin-top:-25px;
+	text-align: center;
+	font-size: 24px;
+	margin-bottom:56px;
+}
+
+.exit{
+	float: right;
+	margin-right: 40px;
+	margin-top: -40px;
+	margin-bottom: 25px;
+}
+
+.exit img{
+	width:25px;
+	height:25px;
+	cursor:pointer;
+}
+
+form{
+	width:16%;
+	margin:auto;
+
+}
+
+label{
+	display: block;
+	font-size: 18px;
+	margin-bottom: 15px;
+	text-align: left;
+}
+
+input{
+	display: block;
+	text-align: center;
+	margin:auto;
+	opacity: 0.4;
+	width:200px;
+	height: 35px;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	border:none;
+}
+
+.submit{
+	width:200px;
+	height:35px;
+	padding: 7px;
+	opacity: 1;
+	background:#50D2C2; 
+	margin-top:35px;
+	border:none;
+}
+
+.connect{
+	background-color:black;
+	opacity:1;
+	color:#FFFFFF;
+	position:absolute;
+	width: 100%;
+	top : 210px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	height:600px;
+	display: none;
+}
+
+.account{
+	width:40%;
+
+}
+
+.account input{
+	width:510px;
+}
+
+.search{
+	background-color:black;
+	opacity:1;
+	color:#FFFFFF;
+	position:absolute;
+	width: 100%;
+	top : 210px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	height:400px;
+	display: none;
+}
+
+.container{
+	width:90%;
+	margin:auto;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.article{
+	display: inline-block;
+	float: left;
+	margin-right: 25px;
+}
+
+.article img{
+	width:174px;
+	height: 232px;
+}
+
+.settings img{
+	width:17px;
+	height:17px;
+}
+
+.btn-search{
+	margin-top: 450px;
+	margin-right:auto;
+	margin-left:auto;
+	text-align: center;
+	font-weight: 100;
+}
+
+
+.search-btn{
+	width: 600px;
+	background: #50D2C2;
+	padding:20px;
+	border-radius:3px;
+	color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Brandon-light', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
