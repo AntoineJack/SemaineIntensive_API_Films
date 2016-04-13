@@ -75,6 +75,44 @@
 							</div>
 					</div>
 		</div>
+	</div>
+		
+	<div class="movie animated zoomIn">
+		<div class="ss-bar">
+			<div class="name">
+				<p>Nom du film</p>
+			</div>
+			<div class="love">
+				<img src="src/images/love.png">
+			</div>
+			<div class="exit2">
+				<img src="src/images/cross.png">
+			</div>
+		</div>
+		<div class="cover">
+			<img src="src/images/batmanhori.jpg">
+		</div>
+		<div class="rating">
+			<p>note du film :</p>
+			<p>1 / 5</p>
+			<p class="directeur">Directeur</p>
+			<p class="name-author">Nom du directeur</p>
+			<p class="name-author">Acteurs</p>
+			<p class="directeur">Acteurs</p>
+			<p class="name-author">Acteur 2</p>
+			<p class="name-author">Acteur 2</p>
+			<p class="name-author">Acteur 2</p>
+		</div>
+		<div class="overview">
+			<p>Dans ce nouveau volet, Batman augmente les mises dans sa guerre contre le crime. Avec l'appui du lieutenant de police Jim Gordon et du procureur de Gotham, Harvey Dent, Batman vise à éradiquer le crime organisé qui pullule dans la ville. Leur association est très efficace mais elle sera bientôt bouleversée par le chaos déclenché par un criminel extraordinaire que les citoyens de Gotham connaissent sous le nom de Joker.</p>
+		</div>
+	</div>
+
+
+				
+	
+
+
 		<div class="btn-search">
 			<a href="#" class="search-btn">AFFINER MA RECHERCHE</a>
 		</div>

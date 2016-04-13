@@ -9,10 +9,12 @@ var wishlist  = document.querySelector('.wishlist');
 var connect   = document.querySelector('.connect');
 var exit1     = document.querySelector('.exit1');
 var btnsign	  = document.querySelector('.btn-sign')
-
 var subtitle  = document.querySelector('.sub-title');
 var searchbar = document.querySelector('.search-bar');
 var socialnet = document.querySelector('.social-net');
+var movie     = document.querySelector('.movie');
+var exit2	  = document.querySelector('.exit2');
+var article   = document.querySelector('.article');
 
 
 // Apparition de la POP-IN Inscription
@@ -56,6 +58,14 @@ exit.addEventListener('click',function(){
 	signin.setAttribute("style","display:none;");
 });
 
+// Disparition de la POP-UP Movie
+exit2.addEventListener('click',function(){
+	movie.setAttribute("style","display:none;");
+});
+
+article.addEventListener('click',function(){
+	movie.setAttribute("style","display:block;");
+});
 
 
 

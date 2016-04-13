@@ -296,7 +296,6 @@ input{
 	right: 0;
 	text-align: center;
 	height:400px;
-	display: none;
 }
 
 .container{
@@ -310,6 +309,7 @@ input{
 	display: inline-block;
 	float: left;
 	margin-right: 25px;
+	cursor:pointer;
 }
 
 .article img{
@@ -343,6 +343,136 @@ input{
     font-weight: 100;
     font-size: 12px;
 }
+
+.movie{
+	background-color:black;
+	opacity:1;
+	color:#FFFFFF;
+	position:absolute;
+	width: 100%;
+	top : 80px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	height:700px;
+	display: none;
+	-vendor-animation-duration: 4s;
+}
+
+.ss-bar{
+	width:100%;
+}
+
+.name{
+	margin:auto;
+	text-align: center;
+	display: inline-block;
+
+}
+
+.name p{
+	font-size: 24px;
+
+}
+
+.love{
+	display: inline-block;
+	margin-left: 15px;
+
+}
+
+.love img{
+	width:20px;
+	height: 20px;
+	display: inline-block;
+	margin-left: 25px;
+}
+
+.exit2{
+	display: inline-block;
+	float: right;
+	margin-right: 50px;
+	margin-top:30px;
+	cursor:pointer;
+}
+
+.exit2 img{
+	width:25px;
+	height: 25px;
+}
+
+.cover{
+	display: inline-block;
+}
+
+.cover img{
+	width:500px;
+	height: 300px;
+}
+
+.rating{
+	display: inline-block;
+	float: right;
+	margin-right: 250px;
+}
+
+
+
+
+.rating p{
+	font-size: 20px;
+}
+
+.rating .directeur{
+	font-size: 25px;
+	margin-bottom: 0px;
+}
+
+.rating .name-author{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+
+.overview{
+	width:500px;
+	margin-left: 200px;
+	margin-top:50px;
+}
+
+.overview p{
+	text-align: left;
+	font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width:400px) and (max-width:876px) {
 
@@ -389,9 +519,67 @@ input{
 
 	.sign{
 		margin-bottom:70px;
+		font-size:9px;
 	}
 
 }
+
+@media screen and (min-width:400px) and (max-width:650px) {
+	
+	.search-bar input[type="search"]{
+		font-size:27px;
+	}
+
+	.sign{
+		margin-bottom:110px;
+
+	}
+
+	.social-net{
+		margin-top: 100px;
+	}
+
+
+@media screen and (min-width:400px) and (max-width:485px) {
+	
+	.search-bar input[type="search"]{
+		font-size:25px;
+	}
+
+	.nav-bar ul{
+		margin-left:20px;
+	}
+
+	.nav-bar li{
+		margin-right:15px;
+	}
+
+	.sign{
+		font-size: 08px;
+	}
+
+	.title h2{
+		font-size: 45px;
+	}
+
+	.sub-title p{
+		font-size: 12px;
+	}
+
+	form{
+		margin-left:120px;
+		width:65%;
+	}
+	input{
+		width:150px;
+	}
+
+	label{
+		font-size: 11px;
+		margin-left: 40px;
+	}
+
+	.submit
 
 
 
