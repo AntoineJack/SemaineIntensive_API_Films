@@ -285,6 +285,8 @@ input{
 	width:510px;
 }
 
+
+/*-----------------SEARCH-----------------*/
 .search{
 	background-color:black;
 	opacity:1;
@@ -295,14 +297,42 @@ input{
 	left: 0;
 	right: 0;
 	text-align: center;
-	height:400px;
+	height:700px;
+	display: none;
+}
+
+.search.visible{
+	background-color:black;
+	opacity:1;
+	color:#FFFFFF;
+	position:absolute;
+	width: 100%;
+	top : 210px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	height:700px;
+	display: block;
 }
 
 .container{
-	width:90%;
+	width:100%;
 	margin:auto;
 	text-align: center;
 	margin-top: 50px;
+}
+
+.exit3{
+	display: inline-block;
+	float: right;
+	margin-top:-20px;
+	cursor:pointer;
+}
+
+.exit3 img{
+	width:25px;
+	height: 25px;
+
 }
 
 .article{
@@ -315,6 +345,7 @@ input{
 .article img{
 	width:174px;
 	height: 232px;
+	display: inline-block;
 }
 
 .settings img{

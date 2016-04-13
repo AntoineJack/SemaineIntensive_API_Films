@@ -5,7 +5,7 @@
 
 	<div class="search-bar">
         <form class="test" method="GET" action="" style="text-align: center;position: absolute;left: 10%;margin-top:25px">
-            <input type="search" name="keywords" placeholder="Find out another wonderful movie"/>
+            <input type="search" name="keywords" placeholder="Tapez le nom de votre film"/>
             <input type="submit" class="hide" value="rechercher"></button>
         </form>
     </div>
@@ -62,25 +62,34 @@
 		</form>
 	</div>
 
-	<div class="search"> <!-- RECHERCHE -->
+	<div class="search <? if(!empty($_GET['keywords'])){ echo "visible";} ?>" >
 		<div class="container">
+				<div class="exit3">
+					<img src="src/images/cross.png">
+				</div>					 
+					<?php foreach(array_slice($data->results, 0, 6) as $results): ?>
+					<figure data-id='<?= $results->id ?>'></figure>
 					<div class="article">
-						<img src="src/images/batmancover.png">
+
+					<img src="http://image.tmdb.org/t/p/w500/<?= $results->poster_path?>">
 							<div class="settings">
+								<p><?= $results->title?></p>
 								<img src="src/images/eye.png">
 								<img src="src/images/line3.png">
 								<img src="src/images/love.png">
 								<img src="src/images/line3.png">
 								<img src="src/images/plus.png">
 							</div>
+						
 					</div>
+					<?php endforeach; ?>
 		</div>
 	</div>
 		
 	<div class="movie animated zoomIn">
 		<div class="ss-bar">
 			<div class="name">
-				<p>Nom du film</p>
+				<p><?= $results->title?></p>
 			</div>
 			<div class="love">
 				<img src="src/images/love.png">
@@ -90,7 +99,7 @@
 			</div>
 		</div>
 		<div class="cover">
-			<img src="src/images/batmanhori.jpg">
+			<img src="http://image.tmdb.org/t/p/w500/<?= $results->poster_path?>">
 		</div>
 		<div class="rating">
 			<p>note du film :</p>
