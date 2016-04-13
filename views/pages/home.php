@@ -69,7 +69,7 @@
 				</div>					 
 					<?php foreach(array_slice($data->results, 0, 6) as $results): ?>
 					<figure data-id='<?= $results->id ?>'></figure>
-					<div class="article">
+					<div class="article" data-id="<?= $results->id ?>">
 
 					<img src="http://image.tmdb.org/t/p/w500/<?= $results->poster_path?>">
 							<div class="settings">
@@ -85,8 +85,10 @@
 					<?php endforeach; ?>
 		</div>
 	</div>
-		
-	<div class="movie animated zoomIn">
+
+<?php foreach(array_slice($data->results, 0, 6) as $results): ?>
+
+	<div class="movie animated zoomIn movie-<?= $results->id ?>">
 		<div class="ss-bar">
 			<div class="name">
 				<p><?= $results->title?></p>
@@ -116,7 +118,7 @@
 			<p>Dans ce nouveau volet, Batman augmente les mises dans sa guerre contre le crime. Avec l'appui du lieutenant de police Jim Gordon et du procureur de Gotham, Harvey Dent, Batman vise à éradiquer le crime organisé qui pullule dans la ville. Leur association est très efficace mais elle sera bientôt bouleversée par le chaos déclenché par un criminel extraordinaire que les citoyens de Gotham connaissent sous le nom de Joker.</p>
 		</div>
 	</div>
-
+<?php endforeach; ?>
 
 				
 	

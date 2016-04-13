@@ -28,7 +28,7 @@ var searchbar = document.querySelector('.search-bar');
 var socialnet = document.querySelector('.social-net');
 var movie     = document.querySelector('.movie');
 var exit2	  = document.querySelector('.exit2');
-var article   = document.querySelector('.article');
+var article   = document.querySelectorAll('.article');
 
 
 
@@ -71,7 +71,7 @@ exit3.addEventListener('click',function(){
 });
 
 
-// Apparition de la POP-IN Inscription
+//Apparition de la POP-IN Inscription
 btnsign.addEventListener('click',function(){
 	signin.setAttribute("style","display:block;");
 });
@@ -79,20 +79,22 @@ exit.addEventListener('click',function(){
 	signin.setAttribute("style","display:none;");
 });
 
-// Disparition de la POP-UP Movie
+//Disparition de la POP-UP Movie
 exit2.addEventListener('click',function(){
 	movie.setAttribute("style","display:none;");
 });
 
-// Apparition de la POPIN movie
-article.addEventListener('click',function(){
-	movie.setAttribute("style","display:block;");
-});
+//Apparition de la POPIN movie
+for (var i = 0; i < article.length; i++) {
+	article[i].addEventListener('click',function(e){
+		var movieSelected = document.querySelector('.movie-' + this.dataset.id);
+		movieSelected.setAttribute("style","display:block;");
+	});
+}
 
-// Touch enter for search our films
-searchbar.addEventListener("keydown", function(e) 
-{
-});
+
+
+
 
 
 
