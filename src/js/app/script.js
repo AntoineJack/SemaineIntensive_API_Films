@@ -14,7 +14,9 @@ $( "figure" ).click(function() {
         $('#movie-title').text(data.title);
         $('#overview').text(data.overview);
         $('#rating').text(data.vote_average + " / 10");
+        $('#poster').attr("src","http://image.tmdb.org/t/p/w500/"+data.poster_path);
         $("#cover").attr("src","http://image.tmdb.org/t/p/w500/"+data.backdrop_path);
+        $("#cover2").attr("src","http://image.tmdb.org/t/p/w500/"+data.backdrop_path);
     }
   );
 });
@@ -24,7 +26,6 @@ $( "figure" ).click(function() {
 var compte 	  = document.querySelector('.compte');
 var signin 	  = document.querySelector('.sign-in');
 var exit   	  = document.querySelector('.exit');
-var wishlist  = document.querySelector('.wishlist');
 var connect   = document.querySelector('.connect');
 var exit1     = document.querySelector('.exit1');
 var search    = document.querySelector('.search');
@@ -33,6 +34,7 @@ var btnsign	  = document.querySelector('.btn-sign')
 var subtitle  = document.querySelector('.sub-title');
 var searchbar = document.querySelector('.search-bar');
 var socialnet = document.querySelector('.social-net');
+var footer    = document.querySelector('.footer');
 
 
 // Apparition de la POP-IN Inscription
@@ -42,6 +44,7 @@ compte.addEventListener('click',function(){
 	searchbar.setAttribute("style","display:none;");
 	btnsign.setAttribute("style","display:none;");
 	socialnet.setAttribute("style","display:none;");
+	footer.setAttribute("style","display:none;");
 
 });
 exit.addEventListener('click',function(){
@@ -50,23 +53,10 @@ exit.addEventListener('click',function(){
 	searchbar.setAttribute("style","display:block;");
 	btnsign.setAttribute("style","display:block;");
 	socialnet.setAttribute("style","display:block;");
+	footer.setAttribute("style","display:block;");
 });
 
-// Apparition de la POP-IN Wishlist
-wishlist.addEventListener('click',function(){
-	connect.setAttribute("style","display:block;");
-	subtitle.setAttribute("style","display:none;");
-	searchbar.setAttribute("style","display:none;");
-	btnsign.setAttribute("style","display:none;");
-	socialnet.setAttribute("style","display:none;");
-});
-exit1.addEventListener('click',function(){
-	connect.setAttribute("style","display:none;");
-	ubtitle.setAttribute("style","display:block;");
-	searchbar.setAttribute("style","display:block;");
-	btnsign.setAttribute("style","display:block;");
-	socialnet.setAttribute("style","display:block;");
-});
+
 
 //Disparition de la page recherche
 exit3.addEventListener('click',function(){
@@ -77,6 +67,11 @@ exit3.addEventListener('click',function(){
 // Apparition de la POP-IN Inscription
 btnsign.addEventListener('click',function(){
 	signin.setAttribute("style","display:block;");
+	subtitle.setAttribute("style","display:none;");
+	searchbar.setAttribute("style","display:none;");
+	btnsign.setAttribute("style","display:none;");
+	socialnet.setAttribute("style","display:none;");
+	footer.setAttribute("style","display:none;");
 });
 exit.addEventListener('click',function(){
 	signin.setAttribute("style","display:none;");
@@ -85,17 +80,62 @@ exit.addEventListener('click',function(){
 // Apparition de la POPIN movie
 $(".article").on('click', function(){
   $(".movie").css("display", "block");
+  $(".footer").css("display", "none");
   console.log(this);
 });
+
+$(".exit3").on('click',function(){
+	$(".footer").css("display","block");
+})
 
 $(".exit2").on('click', function(){
   $(".movie").css("display", "none");
 });
 
-// Touch enter to search our films
-searchbar.addEventListener("keydown", function(e) 
+// HIDE OF THE FOOTER
+if ($('.search').css('display') == 'block')
 {
+   $(".footer").css("display","none");
+   $(".sub-title").css("display","none");
+   $(".btn-sign").css("display","none");
+   $(".search-bar").css("display","none");
+   $(".social-net").css("display","none");
+}
+
+
+$(".exit3").on('click', function(){
+  $(".movie").css("display", "none");
+  $(".footer").css("display","block");
+   $(".sub-title").css("display","block");
+   $(".btn-sign").css("display","block");
+   $(".search-bar").css("display","block");
+   $(".social-net").css("display","block");
+   $(".acount").css("display","none");
+
 });
+
+if ($('.acount').css('display') == 'block')
+{
+   $(".footer").css("display","none");
+   $(".sub-title").css("display","none");
+   $(".btn-sign").css("display","none");
+   $(".search-bar").css("display","none");
+   $(".social-net").css("display","none");
+}
+
+$(".wishlist").on('click', function(){
+   $(".acount").css("display","block");
+
+});
+
+
+
+
+
+
+
+
+
 
 
 

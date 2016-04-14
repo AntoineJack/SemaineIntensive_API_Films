@@ -18,6 +18,6 @@
 	</div>
 
 	<div class="title">
-		<h2>My Similar Movie</h2>
+		<img src="src/images/moovy.png">
 	</div>
 	</header>

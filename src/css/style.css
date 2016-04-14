@@ -1,6 +1,6 @@
 html, body{
 	height: 100%;
-	overflow: hidden;
+	
 }
 
 body {
@@ -9,6 +9,7 @@ body {
 	background:url('../images/bck.png');
 	background-size: cover;
 	background-repeat: no-repeat;
+	margin:0;
 
 }
 
@@ -75,13 +76,10 @@ body {
 	margin-top:-60px;
 }
 
-.title h2{
-	font-size: 100px;
-	color: white;
-	font-family: 'Brandon_light', sans-serif;
-	font-weight: 300;
-	letter-spacing: 12.5;
-    text-transform: uppercase;
+.title img{
+	width: 26%;
+    margin-top: 58px;
+    margin-bottom: 38px;
 }
 
 .sub-title{
@@ -95,19 +93,20 @@ body {
 	color:#FEFEFE;
 	font-family: 'Brandon-med', sans-serif;
 	opacity: 0.75;
-	letter-spacing: 5px;
+	letter-spacing: 2px;
 	font-size: 17px;
 }
 
 
 
 .search-bar input[type="search"] {
-    width: 500%;
+    width: 100%;
     color: rgb(255, 255, 255);
     background: rgba(0, 0, 0, 0);
-    font-size: 60px;
     font-weight: 300;
     height: 60px;
+    font-size: 51px;
+    border-bottom: 1px solid white;
 }
 
 .search-bar .close {
@@ -128,7 +127,7 @@ body {
 
 
 .btn-sign{
-	margin-top: 250px;
+	margin-top: 100px;
 	margin-right:auto;
 	margin-left:auto;
 	text-align: center;
@@ -167,8 +166,7 @@ body {
 }
 
 .sign-in{
-	background-color:black;
-	opacity:0.97;
+	background-color:rgba(0,0,0,0.71);
 	color:#FFFFFF;
 	position:absolute;
 	width: 100%;
@@ -177,9 +175,8 @@ body {
 	right: 0;
 	text-align: center;
 	height:600px;
-	opacity: 0.7;
+	opacity: 1;
 	display: none;
-
 }
 
 .title2{
@@ -202,21 +199,17 @@ body {
 	cursor:pointer;
 }
 
-.exit1{
-	float: right;
-	margin-right: 40px;
-	margin-top: -40px;
-	margin-bottom: 25px;
+.fbconnect{
+	float:left;
+	margin-left:150px;
 }
 
-.exit1 img{
-	width:25px;
-	height:25px;
-	cursor:pointer;
+.fbconnect img{
+	width:30%;
 }
 
 form{
-	width:16%;
+	width:56%;
 	margin:auto;
 
 }
@@ -238,10 +231,24 @@ input{
 	border-radius: 3px;
 	margin-bottom: 15px;
 	border:none;
+	margin-top:60px;
 }
 
-#username{
-	font-size:25px;
+input:focus{
+	outline: none;
+}
+
+form.inscri input{
+	width:250px;
+	margin-bottom:20px;
+
+
+}
+
+form.inscri label{
+	text-align: left;
+    margin-left: 230px;
+    margin-bottom:-50px;
 }
 
 #motdepass{
@@ -262,9 +269,14 @@ input{
 	border:none;
 }
 
-.connect{
-	background-color:black;
-	opacity:0.7;
+.submit:hover{
+	background-color: #2DECB7;
+}
+
+
+
+.acount{
+	background-color:rgba(0,0,0,0.99);
 	color:#FFFFFF;
 	position:absolute;
 	width: 100%;
@@ -276,14 +288,74 @@ input{
 	display: none;
 }
 
-.account{
-	width:40%;
+.profil{
+	float: left;
+    text-align: left;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.profil p{
+	font-size: 17px;
+}
+
+.picture{
+	display: inline-block;
+    width: 80px;
+    float: left;
+    height: 80px;
+    border-radius: 3px;
+    border: 2px solid red;
+    margin-left: 70px;
+}
+
+.menu{
+	display: block;
+    float: left;
+    position: absolute;
+    top: 230px;
+    left: 0px;
+}
+
+.menu ul{
+	list-style: none;
+    text-align: left;
+}
+
+.menu li {
+	margin-bottom: 15px;
+	font-size: 21px;
 
 }
 
-.account input{
-	width:510px;
+.menu a{
+	text-decoration: none;
+	color: white;
+
 }
+
+
+
+.content{
+	width:65%;
+	display: inline-block;
+}
+
+.film{
+	float: left;
+
+}
+
+.film img{
+	width: 154px;
+    height: 212px;
+}
+
+
+
+
+
+
 
 
 /*-----------------SEARCH-----------------*/
@@ -302,8 +374,7 @@ input{
 }
 
 .search.visible{
-	background-color:black;
-	opacity:1;
+	background-color:rgba(0,0,0,0.8);
 	color:#FFFFFF;
 	position:absolute;
 	width: 100%;
@@ -315,17 +386,25 @@ input{
 	display: block;
 }
 
+.backdrop2{
+	z-index: -50;
+	background-color:rgba(0,0,0,0.9);
+	height: 800px;
+}
+
 .container{
 	width:100%;
 	margin:auto;
 	text-align: center;
 	margin-top: 50px;
+	position: relative;
 }
 
 .exit3{
 	display: inline-block;
 	float: right;
 	margin-top:-20px;
+	margin-right: 35px;
 	cursor:pointer;
 }
 
@@ -343,14 +422,33 @@ input{
 }
 
 .article img{
-	width:174px;
-	height: 232px;
-	display: inline-block;
+	width: 154px;
+    height: 212px;
+    display: inline-block;
+}
+
+.article img:hover{
+	width: 164px;
+    height: 222px;
+    border:4px solid white;
+}
+.settings{
+	z-index:70;
+}
+
+.settings p{
+	font-size:14px;
 }
 
 .settings img{
 	width:17px;
 	height:17px;
+}
+
+.settings img:hover{
+	width: 17px;
+    height: 17px;
+    border:none;
 }
 
 .btn-search{
@@ -390,6 +488,23 @@ input{
 	-vendor-animation-duration: 4s;
 }
 
+.backdrop{
+	z-index: -50;
+	background-color:rgba(0,0,0,0.85);
+	height: 800px;
+}
+
+.backdrop img{
+	width:100%;
+	z-index: -5;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+
+
 .ss-bar{
 	width:100%;
 }
@@ -409,6 +524,7 @@ input{
 .love{
 	display: inline-block;
 	margin-left: 15px;
+	position: relative;
 
 }
 
@@ -417,14 +533,19 @@ input{
 	height: 20px;
 	display: inline-block;
 	margin-left: 25px;
+	cursor:pointer;
+	margin-top: -18px;
+	z-index: 3;
 }
 
 .exit2{
 	display: inline-block;
-	float: right;
-	margin-right: 50px;
-	margin-top:30px;
-	cursor:pointer;
+    float: right;
+    position: relative;
+    cursor: pointer;
+    margin-right: 75px;
+    margin-top: 25px;
+    z-index: 6;
 }
 
 .exit2 img{
@@ -434,51 +555,77 @@ input{
 
 .cover{
 	display: inline-block;
+	margin-top:50px;
 }
 
 .cover img{
-	width:500px;
-	height: 300px;
+	width: 100%;
+    position: relative;
+    z-index: 55;
 }
 
 .rating{
 	display: inline-block;
-	float: right;
-	margin-right: 250px;
+    float: right;
+    margin-right: 120px;
+    margin-top: 50px;
 }
-
-
-
 
 .rating p{
-	font-size: 20px;
+	font-size: 22px;
+    font-weight: bold;
+	margin-bottom: -10px;
 }
 
-.rating .directeur{
-	font-size: 25px;
-	margin-bottom: 0px;
+p.directeur{
+	margin-top:30px;
+	font-size: 22px;
+    font-weight: bold;
 }
 
-.rating .name-author{
-	margin-top: 0px;
-	margin-bottom: 0px;
+p#directeur{
+	font-size: 18px;
 }
+
 
 
 .overview{
-	width:500px;
-	margin-left: 200px;
-	margin-top:50px;
+	width: 600px;
+    margin-left: 250px;
+    margin-top: 50px;
 }
 
 .overview p{
 	text-align: left;
-	font-size: 14px;
+	font-size: 20px;
 }
 
 
 
 
+.footer{
+
+	width:100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.47);
+	height: 40px;
+	position: absolute;
+	bottom:0;
+}
+
+.footer img{
+	width:15%;
+	display: inline-block;
+	margin-right: 300px;
+}
+
+.footer p{
+	color:#888888;
+	display: inline-block;
+	float: right;
+	margin-top:9px;
+	margin-right: 19px;
+}
 
 
 

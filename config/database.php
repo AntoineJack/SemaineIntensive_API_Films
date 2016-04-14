@@ -1,15 +1,9 @@
 <?php
 
-// Affiche les erreurs
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-// Connexion variables
 define('DB_HOST','localhost');
-define('DB_NAME','Moovy');
+define('DB_NAME','database_name');
 define('DB_USER','root');
-define('DB_PASS','root'); // Changer en '' pour windows
-define('SALT', 'sfjzpi5JJe5grok');
+define('DB_PASS','root'); // '' par défaut sur windows
 
 try
 {
@@ -21,8 +15,6 @@ try
 }
 catch (Exception $e)
 {
-
-  echo $e;
     // Failed to connect
- //  die('La connexion à la base de données a échouée');
+    die('Could not connect');
 }

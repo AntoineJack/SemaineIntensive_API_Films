@@ -3,20 +3,22 @@
 		<p>Écris le nom de ton film favori pour trouver le film de la soirée</p>
 	</div>
 
-	<div class="search-bar">
-        <form class="test" method="GET" action="" style="text-align: center;position: absolute;left: 10%;margin-top:25px">
-            <input type="search" name="keywords" placeholder="Tapez le nom de votre film"/>
+
+	
+	<div class="search-bar"><!-- BARRE DE RECHERCHE -->
+        <form class="test" method="GET" action="" style="text-align: center;margin:0 auto;">
+            <input type="search" name="keywords" placeholder="Rechercher votre film"/>
             <input type="submit" class="hide" value="rechercher"></button>
         </form>
     </div>
 	
-	<div class="btn-sign">
+	<div class="btn-sign"><!-- BOUTON D'INSCRIPTION -->
 		<a href="#" class="sign">INSCRIS-TOI POUR SAUVEGARDER TES RECHERCHES</a>
 	</div>
 
 
 
-	<div class="social-net">
+	<div class="social-net"><!-- RÉSEAUX SOCIAUX -->
 		<a href="#"><img src="src/images/fb.png"></a>
 		<img src="src/images/line.png">
 		<a href="#"><img src="src/images/twitter.png"></a>
@@ -24,14 +26,20 @@
 		<a href="#"><img src="src/images/linkedin.png"></a>
 	</div>
 
-	<div class="sign-in animated slideInUp"><!-- POP-IN Inscription -->
+
+
+	<div class="sign-in animated slideInUp"><!-- POPIN INSCRIPTION -->
 		<div class="title2">
 			<h4>Inscription</h4>
 		</div>
 		<div class="exit">
 			<img src="src/images/cross.png">
 		</div>
-		<form action="#" method="post">
+		<div class="fbconnect">
+			<a href="#"><img src="src/images/facebook.png"></a>
+		</div>
+
+		<form action="#" method="post" class="inscri" >
 			<div>
 				<label for="username">IDENTIFIANT :</label>
 				<input type="text" name="username" id="username" require="true">
@@ -40,67 +48,84 @@
 				<label for="email">EMAIL :</label>
 				<input type="text" name="email" id="email" require="true">
 				<input type="submit" class="submit">
-			</div>				
+			</div>					
 		</form>
 	</div>
 
-	<div class="connect animated slideInUp"><!-- POP-IN Mon compte -->
+	<div class="acount animated slideInUp"><!-- POPIN INSCRIPTION -->
 		<div class="title2">
 			<h4>Mon compte</h4>
 		</div>
-		<div class="exit1">
+		<div class="exit3">
 			<img src="src/images/cross.png">
 		</div>
-		<form action="#" method="post" class="account">
-			<div>
-				<label for="username">IDENTIFIANT :</label>
-				<input type="text" name="username" id="username" require="true">
-				<label for="motdepass">MOT DE PASSE :</label>
-				<input type="password" name="password" id="motdepass" require="true">
-				<input type="submit" class="submit" value="Log In">
-			</div>				
-		</form>
+		<div class="profil">
+			<p>Nom</p>
+			<p>Prénom</p>
+		</div>
+		<div class="picture">
+			<img src="">
+		</div>	
+		<div class="menu">
+			<ul>
+				<a href="#"><li>Film déja vus</li></a>
+				<a href="#"><li>Film adoré</li></a>
+				<a href="#"><li>A regarder</li></a>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="film">
+				<img src="src/images/batmancover.png">
+			</div>
+		</div>
+
+
 	</div>
 
-	<div class="search <? if(!empty($_GET['keywords'])){ echo "visible";} ?>" >
+
+
+	<div class="search <? if(!empty($_GET['keywords'])){ echo "visible";} ?> animated slideInUp" ><!-- AFFICHE DE FILMS SIMILAIRES -->
 		<div class="container">
 				<div class="exit3">
 					<img src="src/images/cross.png">
-				</div>					 
-					<?php foreach(array_slice($data->results, 0, 6) as $results): ?>
-					<figure data-id='<?= $results->id ?>'>
-					<div class="article">
+				</div>
 
-					<img src="http://image.tmdb.org/t/p/w500/<?= $results->poster_path?>">
+				<?php foreach(array_slice($data->results, 0, 6) as $results): ?>
+				<figure data-id='<?= $results->id ?>'>
+					<div class="article">
+						<img src="http://image.tmdb.org/t/p/w500/<?= $results->poster_path?>">
 							<div class="settings">
-								<p><?= $results->title?></p>
-								<img src="src/images/eye.png">
+								<p><?= $results->title?></p><!-- NOM DE CHAQUE FILM -->
+								<a href="#"><img src="src/images/eye.png"></a>
 								<img src="src/images/line3.png">
-								<img src="src/images/love.png">
+								<a href="#"><img src="src/images/love.png"></a>
 								<img src="src/images/line3.png">
-								<img src="src/images/plus.png">
+								<a href="#"><img src="src/images/plus.png"></a>
 							</div>	
-						
 					</div>
 				</figure>
-					<?php endforeach; ?>
+				<?php endforeach; ?>
 		</div>
 	</div>
+
+
 			
-	<div class="movie animated zoomIn">
+	<div class="movie animated zoomIn"><!-- AFFICHE DE LA PAGE DESCRIPTION DE FILM -->
+		<div class="backdrop">
+			<img  id="cover" src=""><!-- AFFICHE DU BACKDROP -->
 		<div class="ss-bar">
 			<div class="name">
 				<p id="movie-title"></p>
 			</div>
 			<div class="love">
-				<img src="src/images/love.png">
+				<img onclick="#" src="src/images/love.png">
 			</div>
 			<div class="exit2">
 				<img src="src/images/cross.png">
 			</div>
 		</div>
 		<div class="cover">
-			<img src="http://image.tmdb.org/t/p/w500/<?= $results->poster_path?>" id="cover">
+			<img  id="cover2" src="">
 		</div>
 		<div class="rating">
 			<p>Note du film :</p>
@@ -115,17 +140,20 @@
 		<div class="overview">
 			<p id="overview">Dans ce nouveau volet, Batman augmente les mises dans sa guerre contre le crime. Avec l'appui du lieutenant de police Jim Gordon et du procureur de Gotham, Harvey Dent, Batman vise à éradiquer le crime organisé qui pullule dans la ville. Leur association est très efficace mais elle sera bientôt bouleversée par le chaos déclenché par un criminel extraordinaire que les citoyens de Gotham connaissent sous le nom de Joker.</p>
 		</div>
-	</div>
-
-
-				
-	
-
-
-		<div class="btn-search">
-			<a href="#" class="search-btn">AFFINER MA RECHERCHE</a>
 		</div>
 	</div>
 
+	
 
 </section>
+
+
+
+
+
+
+
+
+
+
+
