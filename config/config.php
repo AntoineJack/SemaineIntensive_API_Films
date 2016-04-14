@@ -1,9 +1,10 @@
 <?php
 
+// Connexion variables
 define('DB_HOST','localhost');
-define('DB_NAME','database_name');
+define('DB_NAME','Moovy');
 define('DB_USER','root');
-define('DB_PASS','root'); // '' par défaut sur windows
+define('DB_PASS','root');
 
 try
 {
@@ -15,6 +16,8 @@ try
 }
 catch (Exception $e)
 {
+
+  echo $e;
     // Failed to connect
-    die('Could not connect');
+ //  die('Cound not connect');
 }

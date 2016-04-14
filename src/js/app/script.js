@@ -1,4 +1,4 @@
-console.log('Hello');
+
 
 //test inté api
 $( "figure" ).click(function() {
@@ -7,7 +7,14 @@ $( "figure" ).click(function() {
     'http://api.themoviedb.org/3/movie/'+ id +'?api_key=c22f2fd9062b5e5c6815c9d14c46f6f2',
     function( data )
     {
-        console.log(data);
+        console.log($('#director'));
+        $('#director').text(data.release_date);
+        $('#actor1').text(data.runtime + " min");
+        $('#actor3').text(data.budget + " $");
+        $('#movie-title').text(data.title);
+        $('#overview').text(data.overview);
+        $('#rating').text(data.vote_average + " / 10");
+        $("#cover").attr("src","http://image.tmdb.org/t/p/w500/"+data.backdrop_path);
     }
   );
 });
@@ -26,10 +33,6 @@ var btnsign	  = document.querySelector('.btn-sign')
 var subtitle  = document.querySelector('.sub-title');
 var searchbar = document.querySelector('.search-bar');
 var socialnet = document.querySelector('.social-net');
-var movie     = document.querySelector('.movie');
-var exit2	  = document.querySelector('.exit2');
-var article   = document.querySelectorAll('.article');
-
 
 
 // Apparition de la POP-IN Inscription
@@ -71,7 +74,7 @@ exit3.addEventListener('click',function(){
 });
 
 
-//Apparition de la POP-IN Inscription
+// Apparition de la POP-IN Inscription
 btnsign.addEventListener('click',function(){
 	signin.setAttribute("style","display:block;");
 });
@@ -79,22 +82,20 @@ exit.addEventListener('click',function(){
 	signin.setAttribute("style","display:none;");
 });
 
-//Disparition de la POP-UP Movie
-exit2.addEventListener('click',function(){
-	movie.setAttribute("style","display:none;");
+// Apparition de la POPIN movie
+$(".article").on('click', function(){
+  $(".movie").css("display", "block");
+  console.log(this);
 });
 
-//Apparition de la POPIN movie
-for (var i = 0; i < article.length; i++) {
-	article[i].addEventListener('click',function(e){
-		var movieSelected = document.querySelector('.movie-' + this.dataset.id);
-		movieSelected.setAttribute("style","display:block;");
-	});
-}
+$(".exit2").on('click', function(){
+  $(".movie").css("display", "none");
+});
 
-
-
-
+// Touch enter to search our films
+searchbar.addEventListener("keydown", function(e) 
+{
+});
 
 
 

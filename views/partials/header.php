@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?= $title ?></title>
-	<link rel="stylesheet" href="<?= URL ?>src/css/style.css">
-  	<link rel="stylesheet" href="src/css/animate.css">
+	<link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/animate.css">
 </head>
 <body class="page-<?= $class ?>">
 	<header>

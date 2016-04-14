@@ -56,8 +56,8 @@
 				<label for="username">IDENTIFIANT :</label>
 				<input type="text" name="username" id="username" require="true">
 				<label for="motdepass">MOT DE PASSE :</label>
-				<input type="password" name="motdepass" id="motdepass" require="true">
-				<input type="submit" class="submit">
+				<input type="password" name="password" id="motdepass" require="true">
+				<input type="submit" class="submit" value="Log In">
 			</div>				
 		</form>
 	</div>
@@ -68,8 +68,8 @@
 					<img src="src/images/cross.png">
 				</div>					 
 					<?php foreach(array_slice($data->results, 0, 6) as $results): ?>
-					<figure data-id='<?= $results->id ?>'></figure>
-					<div class="article" data-id="<?= $results->id ?>">
+					<figure data-id='<?= $results->id ?>'>
+					<div class="article">
 
 					<img src="http://image.tmdb.org/t/p/w500/<?= $results->poster_path?>">
 							<div class="settings">
@@ -79,19 +79,18 @@
 								<img src="src/images/love.png">
 								<img src="src/images/line3.png">
 								<img src="src/images/plus.png">
-							</div>
+							</div>	
 						
 					</div>
+				</figure>
 					<?php endforeach; ?>
 		</div>
 	</div>
-
-<?php foreach(array_slice($data->results, 0, 6) as $results): ?>
-
-	<div class="movie animated zoomIn movie-<?= $results->id ?>">
+			
+	<div class="movie animated zoomIn">
 		<div class="ss-bar">
 			<div class="name">
-				<p><?= $results->title?></p>
+				<p id="movie-title"></p>
 			</div>
 			<div class="love">
 				<img src="src/images/love.png">
@@ -101,24 +100,23 @@
 			</div>
 		</div>
 		<div class="cover">
-			<img src="http://image.tmdb.org/t/p/w500/<?= $results->poster_path?>">
+			<img src="http://image.tmdb.org/t/p/w500/<?= $results->poster_path?>" id="cover">
 		</div>
 		<div class="rating">
-			<p>note du film :</p>
-			<p>1 / 5</p>
-			<p class="directeur">Directeur</p>
-			<p class="name-author">Nom du directeur</p>
-			<p class="name-author">Acteurs</p>
-			<p class="directeur">Acteurs</p>
-			<p class="name-author">Acteur 2</p>
-			<p class="name-author">Acteur 2</p>
-			<p class="name-author">Acteur 2</p>
+			<p>Note du film :</p>
+			<p id="rating">1 / 5</p>
+			<p class="directeur">Date de parution :</p>
+			<p class="name-author" id="director">Nom du directeur</p>
+			<p class="directeur">Durée :</p>
+			<p class="name-author" id="actor1">Acteur 2</p>
+			<p class="directeur" id="actor2">Budget :</p>
+			<p class="name-author" id="actor3">Acteur 2</p>
 		</div>
 		<div class="overview">
-			<p>Dans ce nouveau volet, Batman augmente les mises dans sa guerre contre le crime. Avec l'appui du lieutenant de police Jim Gordon et du procureur de Gotham, Harvey Dent, Batman vise à éradiquer le crime organisé qui pullule dans la ville. Leur association est très efficace mais elle sera bientôt bouleversée par le chaos déclenché par un criminel extraordinaire que les citoyens de Gotham connaissent sous le nom de Joker.</p>
+			<p id="overview">Dans ce nouveau volet, Batman augmente les mises dans sa guerre contre le crime. Avec l'appui du lieutenant de police Jim Gordon et du procureur de Gotham, Harvey Dent, Batman vise à éradiquer le crime organisé qui pullule dans la ville. Leur association est très efficace mais elle sera bientôt bouleversée par le chaos déclenché par un criminel extraordinaire que les citoyens de Gotham connaissent sous le nom de Joker.</p>
 		</div>
 	</div>
-<?php endforeach; ?>
+
 
 				
 	
