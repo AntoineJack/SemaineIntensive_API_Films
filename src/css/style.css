@@ -273,6 +273,20 @@ form.inscri label{
 	background-color: #2DECB7;
 }
 
+.connexion{
+	background-color:rgba(0,0,0,0.71);
+	color:#FFFFFF;
+	position:absolute;
+	width: 100%;
+	top : 210px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	height:600px;
+	opacity: 1;
+	display: none;
+}
+
 
 
 .acount{

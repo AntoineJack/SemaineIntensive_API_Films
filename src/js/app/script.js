@@ -38,15 +38,7 @@ var footer    = document.querySelector('.footer');
 
 
 // Apparition de la POP-IN Inscription
-compte.addEventListener('click',function(){
-	signin.setAttribute("style","display:block;");
-	subtitle.setAttribute("style","display:none;");
-	searchbar.setAttribute("style","display:none;");
-	btnsign.setAttribute("style","display:none;");
-	socialnet.setAttribute("style","display:none;");
-	footer.setAttribute("style","display:none;");
 
-});
 exit.addEventListener('click',function(){
 	signin.setAttribute("style","display:none;");
 	subtitle.setAttribute("style","display:block;");
@@ -65,17 +57,6 @@ exit3.addEventListener('click',function(){
 
 
 // Apparition de la POP-IN Inscription
-btnsign.addEventListener('click',function(){
-	signin.setAttribute("style","display:block;");
-	subtitle.setAttribute("style","display:none;");
-	searchbar.setAttribute("style","display:none;");
-	btnsign.setAttribute("style","display:none;");
-	socialnet.setAttribute("style","display:none;");
-	footer.setAttribute("style","display:none;");
-});
-exit.addEventListener('click',function(){
-	signin.setAttribute("style","display:none;");
-});
 
 // Apparition de la POPIN movie
 $(".article").on('click', function(){
@@ -105,12 +86,14 @@ if ($('.search').css('display') == 'block')
 
 $(".exit3").on('click', function(){
   $(".movie").css("display", "none");
+  $(".search").css("display", "none");
   $(".footer").css("display","block");
    $(".sub-title").css("display","block");
    $(".btn-sign").css("display","block");
    $(".search-bar").css("display","block");
    $(".social-net").css("display","block");
    $(".acount").css("display","none");
+   $(".connexion").css("display","none");
 
 });
 
@@ -127,6 +110,19 @@ $(".wishlist").on('click', function(){
    $(".acount").css("display","block");
 
 });
+
+$(".log-in").on('click', function(){
+   $(".sign-in").css("display","block");
+});
+
+$(".log-in").on('click', function(){
+   $(".sign-in").css("display","block");
+});
+
+$(".compte").on('click', function(){
+   $(".connexion").css("display","block");
+});
+
 
 
 

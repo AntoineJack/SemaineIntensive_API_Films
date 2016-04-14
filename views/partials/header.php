@@ -10,12 +10,11 @@
 	<header>
 		<div class="nav-bar">
 		<ul>
-			<li><a href="#" class="compte">Mon compte</a></li>
-			<li><a href="#">Mes films</a></li>
-			<li class="endofbar"><a href="#" class="wishlist">Ma Wishlist</a></li>
-	
+			<li><a href="#" class="compte">Se connecter</a></li>
+			<li><a href="#" class="log-in">S'enregistrer</a></li>
+			<li class="endofbar"><a href="#" class="wishlist">Mon compte</a></li>
 		</ul>
-	</div>
+		</div>
 
 	<div class="title">
 		<img src="src/images/moovy.png">

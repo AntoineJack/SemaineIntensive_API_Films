@@ -52,6 +52,28 @@
 		</form>
 	</div>
 
+	<div class="connexion animated slideInUp"><!-- POPIN INSCRIPTION -->
+		<div class="title2">
+			<h4>Connexion</h4>
+		</div>
+		<div class="exit3">
+			<img src="src/images/cross.png">
+		</div>
+		<div class="fbconnect">
+			<a href="#"><img src="src/images/facebook.png"></a>
+		</div>
+
+		<form action="#" method="post" class="inscri" >
+			<div>
+				<label for="username">IDENTIFIANT :</label>
+				<input type="text" name="username" id="username" require="true">
+				<label for="motdepass">MOT DE PASSE :</label>
+				<input type="text" name="motdepass" id="motdepass" require="true">
+				<input type="submit" class="submit">
+			</div>					
+		</form>
+	</div>
+
 	<div class="acount animated slideInUp"><!-- POPIN INSCRIPTION -->
 		<div class="title2">
 			<h4>Mon compte</h4>
@@ -78,8 +100,6 @@
 				<img src="src/images/batmancover.png">
 			</div>
 		</div>
-
-
 	</div>
 
 
