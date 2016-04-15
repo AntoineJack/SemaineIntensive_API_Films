@@ -1,3 +1,3 @@
 <?php
 
-define('URL','http://localhost/Semaine%20intensive/');
+define('URL','http://antoine-peltre.fr/moovy/');

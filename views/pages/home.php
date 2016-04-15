@@ -16,18 +16,6 @@
 		<a href="#" class="sign">INSCRIS-TOI POUR SAUVEGARDER TES RECHERCHES</a>
 	</div>
 
-
-
-	<div class="social-net"><!-- RÉSEAUX SOCIAUX -->
-		<a href="#"><img src="src/images/fb.png"></a>
-		<img src="src/images/line.png">
-		<a href="#"><img src="src/images/twitter.png"></a>
-		<img src="src/images/line.png">
-		<a href="#"><img src="src/images/linkedin.png"></a>
-	</div>
-
-
-
 	<div class="sign-in animated slideInUp"><!-- POPIN INSCRIPTION -->
 		<div class="title2">
 			<h4>Inscription</h4>
@@ -36,17 +24,17 @@
 			<img src="src/images/cross.png">
 		</div>
 		<div class="fbconnect">
-			<a href="#"><img src="src/images/facebook.png"></a>
+			<a href=""><img src="src/images/facebook.png"></a>
 		</div>
 
 		<form action="#" method="post" class="inscri" >
 			<div>
 				<label for="username">IDENTIFIANT :</label>
-				<input type="text" name="username" id="username" require="true">
-				<label for="motdepass">MOT DE PASSE :</label>
-				<input type="text" name="motdepass" id="motdepass" require="true">
+				<input type="text" name="username" id="username" required>
+				<label for="motdepasse">MOT DE PASSE :</label>
+				<input type="password" name="motdepasse" id="motdepasse" required>
 				<label for="email">EMAIL :</label>
-				<input type="text" name="email" id="email" require="true">
+				<input type="text" name="email" id="email" required>
 				<input type="submit" class="submit">
 			</div>					
 		</form>
@@ -60,15 +48,15 @@
 			<img src="src/images/cross.png">
 		</div>
 		<div class="fbconnect">
-			<a href="#"><img src="src/images/facebook.png"></a>
+			<a href=""><img src="src/images/facebook.png"></a>
 		</div>
 
 		<form action="#" method="post" class="inscri" >
 			<div>
 				<label for="username">IDENTIFIANT :</label>
-				<input type="text" name="username" id="username" require="true">
-				<label for="motdepass">MOT DE PASSE :</label>
-				<input type="text" name="motdepass" id="motdepass" require="true">
+				<input type="text" name="username" id="username" required>
+				<label for="motdepasse">MOT DE PASSE :</label>
+				<input type="password" name="motdepasse" id="motdepasse" required>
 				<input type="submit" class="submit">
 			</div>					
 		</form>

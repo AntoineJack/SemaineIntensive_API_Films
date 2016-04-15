@@ -1,6 +1,6 @@
 
 
-//test inté api
+//API
 $( "figure" ).click(function() {
   id = $(this).data('id');
   $.getJSON(
@@ -56,8 +56,6 @@ exit3.addEventListener('click',function(){
 });
 
 
-// Apparition de la POP-IN Inscription
-
 // Apparition de la POPIN movie
 $(".article").on('click', function(){
   $(".movie").css("display", "block");
@@ -97,8 +95,7 @@ $(".exit3").on('click', function(){
 
 });
 
-if ($('.acount').css('display') == 'block')
-{
+if ($('.acount').css('display') == 'block'){
    $(".footer").css("display","none");
    $(".sub-title").css("display","none");
    $(".btn-sign").css("display","none");
@@ -113,6 +110,12 @@ $(".wishlist").on('click', function(){
 
 $(".log-in").on('click', function(){
    $(".sign-in").css("display","block");
+   $(".sub-title").css("display","none");
+   $(".btn-sign").css("display","none");
+   $(".search-bar").css("display","none");
+   $(".social-net").css("display","none");
+   $(".footer").css("display","none");
+
 });
 
 $(".log-in").on('click', function(){
@@ -121,7 +124,12 @@ $(".log-in").on('click', function(){
 
 $(".compte").on('click', function(){
    $(".connexion").css("display","block");
+   $(".sub-title").css("display","none");
+   $(".btn-sign").css("display","none");
+   $(".search-bar").css("display","none");
+   $(".social-net").css("display","none");
 });
+
 
 
 
